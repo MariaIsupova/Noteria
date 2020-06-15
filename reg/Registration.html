@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sugn up</title>
+
+  
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style_registration.css">
+</head>
+
+<body>
+  
+  <div class="form-wrap">
+
+    <div class="registration">Регистрация</div>
+    <div class="sing_in" style="font-size: 18px"> или <a href="../index.html" style="font-size: 28px">Вход </a></div>
+    
+    <form method="post">
+      <label for="user_name">
+        <input type="text" id="name" required placeholder="Имя пользователя" minlength="2" required>
+      </label>
+
+      <label for="email">
+        <input type="email" id="email" required placeholder="Почта" required>
+      </label>
+
+      <label for="password">
+        <input type="password" id="password" required placeholder="Пароль" maxlength="100" minlength="5" required>
+      </label>
+
+      <label for="repeat_password">
+        <input type="password" id="password" required placeholder="Повторите пароль" maxlength="100" minlength="5"
+          required>
+      </label>
+
+      <input value="Зарегистрироваться" , type="submit">
+    </form>
+  </div>
+</body>
+
+</html>
+
