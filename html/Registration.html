@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style_i.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="form-wrap">
+
+    <h1>Регистрация</h1>
+
+    <div class="social-list">
+      <a href="ссылка">
+        <img class="gmail" src="../img/gmail.svg" alt="gmail" />
+      </a>
+      <a href="ссылка">
+        <img class="telegram" src="../img/telegram.svg" alt="telegram" />
+      </a>
+      <a href="ссылка">
+        <img class="vk" src="../img/vk.svg" alt="vk" />
+      </a>
+    </div>
+
+    <p>или</p>
+
+    <form method="post">
+      <label for="user_name">
+        <input type="text" id="name" required placeholder="Имя пользователя" minlength="2" required>
+      </label>
+
+      <label for="email">
+        <input type="email" id="email" required placeholder="Почта" required>
+      </label>
+
+      <label for="password">
+        <input type="password" id="password" required placeholder="Пароль" maxlength="100" minlength="5" required>
+      </label>
+
+      <label for="repeat_password">
+        <input type="password" id="password" required placeholder="Повторите пароль" maxlength="100" minlength="5"
+          required>
+      </label>
+
+      <input value="Зарегистрироваться"  type="submit">
+
+      <div class="autorization">
+        Уже есть аккаунт?
+        <a href="../Autorization.html">Войти </a>
+    </div>
+    </form>
+  </div>
+</body>
+
+</html>

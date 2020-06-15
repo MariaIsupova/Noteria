@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autorization</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style_i.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Авторизация</h1>
+
+        <div class="social-list">
+            <a href="ссылка">
+                <img class="gmail" src="../img/gmail.svg" alt="gmail" />
+            </a>
+            <a href="ссылка">
+                <img class="telegram" src="../img/telegram.svg" alt="telegram" />
+            </a>
+            <a href="ссылка">
+                <img class="vk" src="../img/vk.svg" alt="vk" />
+            </a>
+        </div>
+
+        <p>или</p>
+        <form method="post" >
+            <label for="username">
+                <input type="email" id="username" required placeholder="Почта" minlength="4" required>
+            </label>
+            <label for="password">
+                <input type="password" id="password" required placeholder="Пароль" maxlength="100" minlength="5"
+                    required>
+            </label>
+            <input value="Войти"  type="submit">
+        </form>
+
+        <div class="reg">
+            Не зарегестрированы?
+            <a href="../Registration.html">Зарегистрироваться </a>
+        </div>
+    </div>
+</body>
+
+</html>
