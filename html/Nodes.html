@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style_notes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="form-wrap">
+        <div class="bar">
+            <img class="logo_img" src="../img/logo.svg" alt="lkft">
+            <input name='exit' type='button' onclick="location.href='' " value='Выйти'>
+        </div>
+
+        <div class="user_name">
+            <img class="user_img" src="../img/ikon1.svg" alt="lkft">
+            <h1>Чернова Надежда</h1>
+        </div>
+
+
+        <div class="work-area">
+            <div class="category">
+                <h2>Категории</h2>
+                <div class="dec"></div>
+
+                <ul>
+                    <li onclick="location.href=''">Личное</li>
+                    <li onclick="location.href=''">Работа</li>
+                    <li onclick="location.href=''">Финансы</li>
+                    <li onclick="location.href=''">Встречи</li>
+                    <li onclick="location.href=''">Будут появляться новые, созданные</li>
+                </ul>
+
+                <form method="post">
+                    <input type="text" id="new_category" required placeholder="Новая категория" minlength="2" required>
+
+                    <input value="Добавить" type="submit">
+                </form>
+            </div>
+
+            <div class="note-list">
+                <div class="note" onclick="location.href=''">
+                    <p class="name">Будет отображаться текст заметки, было бы прикольно чтобы передавались только 5
+                        первых строк
+                    </p>
+                </div>
+                <div class="note" onclick="location.href=''">
+                    <p class="name">Будет отображаться текст заметки, было бы прикольно чтобы передавались только 5
+                        первых строк
+                    </p>
+                </div>
+                <div class="note" onclick="location.href=''">
+                    <p class="name">Будет отображаться текст заметки, было бы прикольно чтобы передавались только 5
+                        первых строк
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+</body>
+
+</html>
