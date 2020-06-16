@@ -30,7 +30,7 @@ body {
 } */
 
 .bar {
-    margin:  30px 135px 30px 10%;;
+    margin:  30px 135px 30px 10%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -41,7 +41,7 @@ body {
 }
 
 input[ name='registration'] {
-    margin:45px 0px 45px 700px;
+    margin:45px 0px 45px 600px;
     width: 290px;
     height: 40px;
 
@@ -146,4 +146,52 @@ input[type="button"] {}
 input[type="button"]:hover,
 .new_note:hover {
     transform: scale(1.05);
+}
+
+.admin_note{
+    margin-left: 10%;
+    margin-top: 70px;
+    margin-bottom: 70px;
+
+    
+    width: 500px;
+    border-top: 2px solid #1A3263; 
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    align-items: center;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #1A3263;
+    
+
+    
+}
+.n{
+    margin: 20px 0px;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.note{
+    width: 650px;
+    border: 1px solid #FAB95B;
+    
+}
+.name_note{
+    margin: 20px 40px;
+    font-weight: bold;
+    font-size: 26px;
+    color: #FF7474;
+}
+
+.content{
+    margin: 20px;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.date {
+    margin: 20px;
+    font-weight: normal;
+    font-size: 18px;
 }
