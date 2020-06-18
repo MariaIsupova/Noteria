@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/style_index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style_index.css' %}">
+     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+
+</head>
+
+<body>
+    <div class="bar">
+        <img class="logo_img" src="../static/img/logo.svg" alt="lkft">
+        <input type="button" value="Зарегистрироваться" onclick="location.href='Registration' " name="registration">
+        <input name='avtorization' type='button' onclick="location.href='Autorization' " value='Войти'>
+    </div>
+
+    <div class="text">
+        <h1>Создавай уникальные заметки, строй планы и делись ими со своими друзьями.</h1>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/style_notes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style_notes.css' %}">
+     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+</head>
+
+<body>
+    <div class="form-wrap">
+        <div class="bar">
+            <img class="logo_img" src="../static/img/logo.svg" alt="lkft">
+
+            <input type="text" name="search" placeholder="Искать з десь...">
+            <button name="but" type="submit"></button>
+
+            <input name='exit' type='button' onclick="location.href=' ./' " value='Выйти'>
+        </div>
+
+        <div class="user_name">
+            <img class="user_img" src="../static/img/ikon1.svg" alt="lkft">
+            <h1> {{ request.user.username }}</h1>
+        </div>
+
+
+        <div class="work-area">
+            <div class="category">
+                <h2>Категории</h2>
+                <div class="dec"></div>
+
+                <ul>
+                    <li onclick="location.href=''">Личное</li>
+                    <li onclick="location.href=''">Работа</li>
+                    <li onclick="location.href=''">Финансы</li>
+                    <li onclick="location.href=''">Встречи</li>
+                    <li onclick="location.href=''">Будут появляться новые, созданные</li>
+                </ul>
+
+                <form method="post">
+                    <input type="text" name="new_category" id="new_category" required placeholder="Новая категория"
+                        minlength="2" required>
+
+                    <input value="Добавить" type="submit">
+                </form>
+            </div>
+
+
+            <div class="note-list">
+                <div class="note" onclick="location.href='Content'">
+                    <p class="name_note">Название заметки</p>
+                    <p class="content">Будет отображаться текст заметки, только первые 4 строки заметки. Остальное
+                        обрежеться, примерно так как показано</p>
+                    <p class="date">Дата </p>
+
+                </div>
+                <div class="note" onclick="location.href=''">
+                    <p class="name_note">Название заметки</p>
+                    <p class="content">Будет отображаться текст заметки, только первые 4 строки заметки. Остальное
+                        обрежеться, примерно так как показано</p>
+                    <p class="date">Дата </p>
+
+
+                </div>
+                <div class="note" onclick="location.href=''">
+                    <p class="name_note">Название заметки</p>
+                    <p class="content">Будет отображаться текст заметки, только первые 4 строки заметки. Остальное
+                        обрежеться, примерно так как показано</p>
+                    <p class="date">Дата </p>
+                </div>
+
+                <div class="note" onclick="location.href=''">
+                    <p class="name_note">Название заметки</p>
+                    <p class="content">Будет отображаться текст заметки, только первые 4 строки заметки. Остальное
+                        обрежеться, примерно так как показано</p>
+                    <p class="date">Дата </p>
+                </div>
+
+                <a onclick="location.href='Content'">
+                    <img class="_add" src="../static/img/plus_note.svg" alt="Добавить">
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

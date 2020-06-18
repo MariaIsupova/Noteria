@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autorization</title>
+
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/style_i.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="{% static 'css/style_i.css' %}">
+     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Авторизация</h1>
+
+
+
+        <form method="post" >
+            {% csrf_token %}
+            <label for="username">
+               <input type="text" id="username" name ="username" required placeholder="Почта" minlength="3" required>
+            </label>
+            <label for="password">
+                <input type="password" id="password" name="password" required placeholder="Пароль" maxlength="100" minlength="5"
+                    required>
+            </label>
+            <input value="Войти"  type="submit">
+<!--            onclick="location.href='Nodes'" -->
+        </form>
+        {% if error %}
+        <p style ="color:red;">{{ error }}</p>
+        {% endif %}
+
+        <div class="reg">
+            Не зарегестрированы?
+            <a onclick="location.href='Registration'">Зарегистрироваться </a>
+        </div>
+    </div>
+</body>
+
+</html>
