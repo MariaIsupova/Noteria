@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'deb777*y%a!5v0sx3*z6vl5*!xinn=onvzw$@2qhbvzc#v-b2f'
+SECRET_KEY = 'pros#ga$698+70)@#0=%i!(@-fw!-(y8+&+10ig9#efsc7m)s7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['1a05a42321ae.ngrok.io', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -37,9 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Noteria',
-    'user.apps.UserConfig'
-
+    'notetia'
 ]
 
 MIDDLEWARE = [
@@ -72,22 +70,20 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'siteroot.wsgi.application'
 
-ALLOWED_HOSTS = ['1a05a42321ae.ngrok.io', '127.0.0.1', 'localhost']
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'notes',
-        'USER': 'django',
-        'PASSWORD': 'EzVz4tW1hy',
-        'HOST': 'localhost',
-        'PORT': '5432'
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'notes',
+            'USER': 'django',
+            'PASSWORD': 'EzVz4tW1hy',
+            'HOST': 'localhost',
+            'PORT': '5432'
     }
 }
-
 
 
 # Password validation
@@ -127,7 +123,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
 STATIC_ROOT = '../static'
-# MEDIA_ROOT = 'user/media'
-# MEDIA_URL = '/media/'

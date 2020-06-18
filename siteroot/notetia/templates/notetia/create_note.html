@@ -14,14 +14,16 @@
 </head>
 
 <body>
+
     <div class="form-wrap">
+
         <div class="bar">
             <img class="logo_img" src='{% static "img/logo.svg" %}' alt="lkft">
 
-            <input type="text" name="search" placeholder="Искать здесь...">
-            <button name="but" type="submit"></button>
 
-            <input name='exit' type='button' onclick="location.href='' " value='Выйти'>
+
+            <input name='exit' type='button' onclick="location.href='/notetia/' " value='Выйти'>
+
         </div>
 
         <div class="user_name">
@@ -37,7 +39,8 @@
             <p style="color:red;">{{ error }}</p>
         {% endif %}
         {% if note.id > 0  %}
-            <form action="{% url 'update_note' category.id  note.id %}" method="POST">
+
+            <form action="{% url 'update_note' category.id note.id %}" method="POST">
                 {% csrf_token %}
                 <input type="text" id="note_name" name="note_name" value="{{note.subject}}" placeholder="Название заметки" required >
 

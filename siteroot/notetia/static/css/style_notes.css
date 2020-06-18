@@ -42,41 +42,7 @@ body {
     height: 130px;
 }
 
-input[name="search"] {
-    margin: 45px 0px 45px 400px;
-    width: 400px;
-    height: 40px;
-    outline: none;
-    padding-left: 15px;
-    border-left: 3px solid #1A3263;
-    border-bottom: 3px solid #1A3263;
-    border-top: 3px solid #1A3263;
-    border-right: none;
 
-    font-family: 'Playfair Display', serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    align-items: center;
-    letter-spacing: 0.02em;
-}
-
-button[name="but"] {
-    margin: 45px 0px;
-    width: 40px;
-    height: 40px;
-    outline: none;
-    border-right: 3px solid #1A3263;
-    border-bottom: 3px solid #1A3263;
-    border-top: 3px solid #1A3263;
-    border-left: none;
-    background-color: #FBFBFB;
-    background-image: url("../img/search.svg");
-    background-size: 80% 80%;
-    background-position: center center;
-    background-repeat: no-repeat;
-
-}
 
 .user_name {
     margin: 30px 0px 30px 130px;
@@ -101,8 +67,8 @@ h1 {
 }
 
 input[name='exit'] {
-    margin: 45px 0px 45px 30px;
-    display: block;
+    margin-top:45px;
+    margin-left: 800px;
     width: 170px;
     height: 40px;
 
