@@ -1,0 +1,20 @@
+
+{% extends 'user/base.html' %}
+{% block title %} {{ category.title }} {% endblock %}
+{% block list_of_notes %}
+    {% for note in notes %}
+
+        <div class="note" onclick="location.href='/Noteria/{{category.id}}/{{note.id}}'">
+
+            <p class="name_note">{{ note.subject }}</p>
+            <p class="content">{{ note.text }}</p>
+            <p class="date">{{ note.created_at }}</p>
+
+
+        </div>
+
+    {% endfor %}
+    <a href = "{% url 'new_note' category.id %}">
+        {% load static %}<img class="_add" src='{% static "img/plus_note.svg" %}' alt="Добавить" />
+    </a>
+{% endblock %}

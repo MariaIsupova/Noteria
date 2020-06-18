@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style_content.css">
+    <link rel="stylesheet" href="{% static 'css/style_content.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="form-wrap">
+        <div class="bar">
+            <img class="logo_img" src='{% static "img/logo.svg" %}' alt="lkft">
+
+            <input type="text" name="search" placeholder="Искать здесь...">
+            <button name="but" type="submit"></button>
+
+            <input name='exit' type='button' onclick="location.href='' " value='Выйти'>
+        </div>
+
+        <div class="user_name">
+            <img class="user_img" src='{% static "img/ikon1.svg" %}' alt="lkft">
+            <h1>{{ request.user.username }}</h1>
+        </div>
+
+        <a href="./">
+            <img class="back" src='{% static "img/back.svg" %}' alt="lkft">
+        </a>
+        <h2>{{ category.title }}</h2>
+        {% if error %}
+            <p style="color:red;">{{ error }}</p>
+        {% endif %}
+        {% if note.id > 0  %}
+            <form action="{% url 'update_note' category.id  note.id %}" method="POST">
+                {% csrf_token %}
+                <input type="text" id="note_name" name="note_name" value="{{note.subject}}" placeholder="Название заметки" required >
+
+                <textarea rows="20" cols="140" name="note" id="note" placeholder="Начните писать...">{{note.text}}</textarea>
+    <!--            <input class="custom-checkbox" type="checkbox" id="share" /><label  for="share">Доступно всем</label>-->
+
+                <div class="funtion">
+                    <input type="submit" value="Изменить" name="add" />
+
+    <!--                    <input type="submit" value="Изменить" name="add" onclick="location.href='{{note.id}}/update_note' "/>-->
+                    <input name="delete" type='button' value='Удалить' onclick="location.href='{{note.id}}/delete_note' "/>
+                </div>
+            </form>
+        {% else %}
+            <form action="{% url 'create_note' category.id%}" method="POST">
+                {% csrf_token %}
+                <input type="text" name="note_name" value="{{note.subject}}" placeholder="Название заметки" required >
+
+                <textarea rows="20" cols="140" name="note"  placeholder="Начните писать...">{{note.text}}</textarea>
+    <!--            <input class="custom-checkbox" type="checkbox" id="share" /><label  for="share">Доступно всем</label>-->
+
+                <div class="funtion">
+                    <input type="submit" value="Сохранить" name="add" />
+                </div>
+            </form>
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>

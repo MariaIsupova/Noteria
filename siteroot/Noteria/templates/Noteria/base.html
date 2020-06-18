@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/style_notes.css">
+    <link rel="stylesheet" href="{% static 'css/style_notes.css' %}">
+     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div class="form-wrap">
+        <div class="bar">
+
+            <img class="logo_img" src='{% static "img/logo.svg" %}' alt="lkft">
+
+            <input type="text" name="search" placeholder="Искать здесь...">
+            <button name="but" type="submit"></button>
+
+            <input name='exit' type='button' onclick="location.href='./' " value='Выйти'>
+        </div>
+
+        <div class="user_name">
+            <img class="user_img" src='{% static "img/ikon1.svg" %}' alt="lkft">
+            <h1>{{ request.user.username }}</h1>
+        </div>
+
+
+        <div class="work-area">
+            <div class="category">
+<!--                {% block table_categories %} {% endblock %}-->
+                <h2>Категории</h2>
+                <div class="dec"></div>
+                <ul>
+                    {% for category in categories %}
+                        <li><a href = "{% url 'category_by_id' category.id %}">{{category.title}}</a></li>
+                    {% endfor %}
+                </ul>
+
+                <form action="{% url 'create_category' %}" method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="new_category" id="new_category" placeholder="Новая категория"
+                        minlength="2" required>
+
+                    <input value="Добавить" type="submit">
+
+                </form>
+
+            </div>
+
+            <div class="note-list">
+                {% block list_of_notes %} {% endblock %}
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
